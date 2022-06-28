@@ -246,7 +246,7 @@ Un premier test est fait pour s'assurer du bon enchainement des "_WorkflowStatus
 
 ### **4.2. Test groupe B :** status _RegisteringVoters_
 
-Mettons le "_WorkflowStatus_" à "_RegisteringVoters_" est testons toutes les fonctions :
+Mettons le "_WorkflowStatus_" à "_RegisteringVoters_" et testons toutes les fonctions :
 
 **Resultats groupe B :** 26 tests
 ![N|Solid](asset/img/testB.png)
@@ -255,7 +255,7 @@ Mettons le "_WorkflowStatus_" à "_RegisteringVoters_" est testons toutes les fo
 
 ### **4.2. Test groupe C :** status _ProposalsRegistrationStarted_
 
-Mettons le "_WorkflowStatus_" à "_ProposalsRegistrationStarted_" est testons toutes les fonctions :
+Mettons le "_WorkflowStatus_" à "_ProposalsRegistrationStarted_" et testons toutes les fonctions :
 
 Paramètres préchargé dans le ``beforeEach` :
 ```js
@@ -278,7 +278,7 @@ beforeEach(async function () {
 
 ### **4.3. Test groupe D :** status _ProposalsRegistrationEnded_
 
-Mettons le "_WorkflowStatus_" à "_ProposalsRegistrationEnded_" est testons toutes les fonctions :
+Mettons le "_WorkflowStatus_" à "_ProposalsRegistrationEnded_" et testons toutes les fonctions :
 
 Paramètres préchargé dans le ``beforeEach` :
 ```js
@@ -310,7 +310,7 @@ beforeEach(async function () {
 
 ### **4.4. Test groupe E :** status _VotingSessionStarted_
 
-Mettons le "_WorkflowStatus_" à "_VotingSessionStarted_" est testons toutes les fonctions :
+Mettons le "_WorkflowStatus_" à "_VotingSessionStarted_" et testons toutes les fonctions :
 
 Paramètres préchargé dans le ``beforeEach` :
 ```js
@@ -344,7 +344,7 @@ beforeEach(async function () {
 
 ### **4.5. Test groupe F :** status _VotingSessionEnded_
 
-Mettons le "_WorkflowStatus_" à "_VotingSessionEnded_" est testons toutes les fonctions :
+Mettons le "_WorkflowStatus_" à "_VotingSessionEnded_" et testons toutes les fonctions :
 
 Paramètres préchargé dans le ``beforeEach` :
 ```js
@@ -384,7 +384,7 @@ beforeEach(async function () {
 
 ### **4.6. Test groupe G :** status _VotesTallied_
 
-Mettons le "_WorkflowStatus_" à "_VotesTallied_" est testons toutes les fonctions :
+Mettons le "_WorkflowStatus_" à "_VotesTallied_" et testons toutes les fonctions :
 
 Paramètres préchargé dans le ``beforeEach` :
 ```js
