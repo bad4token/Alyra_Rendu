@@ -454,12 +454,15 @@ Exemple d'erreur qui provoque un require lors test C16
 
 <br/>
 
-### 6.1. Solutions d'amélioration
+### 6.1. Solution d'amélioration
 
-Il serai utile de placer un require sur la fonction `getOneProposal()` afin de controler que l'`id` passé en paramètre est inférieur à la talle du tableau `proposalsArray`.
+Il serait utile de placer un require sur la fonction `getOneProposal()` afin de controler que l'`id` passé en paramètre est inférieur à la talle du tableau `proposalsArray`.
 
-```sh
-$ 
+```js
+function getOneProposal(uint _id) external onlyVoters view returns (Proposal memory) {
+    require(_id<proposalsArray.length, "Cette proposition n'existe pas !");
+    return proposalsArray[_id];
+} 
 ```
 
 <br/>
