@@ -141,7 +141,7 @@ contract Voting is Ownable {
         require(_voterAddr != address(0), unicode"Veuillez saisir une adresse valide pour pouvoir vous inscrire !");
         require(uint(stepId) < 6, unicode"Le système de vote a été annulé, merci de votre compréhension !");
         require(uint(stepId) < 1, unicode"La periode d'inscription de nouveaux votants est maintenant fermé, veuillez faire des propositions et/ou voter !");
-        require(Voters[_voterAddr].isRegistered == false, unicode"Cette personnes est déjà inscrite pour voter. Attention ici pas de tricherie !");
+        require(Voters[_voterAddr].isRegistered == false, unicode"Cette personne est déjà inscrite pour voter. Attention ici pas de tricherie !");
 
         // On mémorise l'addresse du votant
         votersList.push(_voterAddr);
@@ -197,7 +197,6 @@ contract Voting is Ownable {
 
 
     //[ONLYOWNER] Fonction qui permet de determiner la proposition gagnante
-//    function S4_doTallied() external onlyOwner returns(uint[] memory) {
     function S4_doTallied() external onlyOwner returns(uint) {
         require(uint(stepId) > 4, unicode"Veuillez passer au status 'VotesTallied' en appuyant sur [S0_activeNextStep] !");
         require(uint(winningProposalId) < 1234567890, unicode"Le dépouillement a été fait mais il y plusieurs propositions qui ont reçu le même nombre de vote ! Pas de winner unique :(");
@@ -229,6 +228,27 @@ contract Voting is Ownable {
         }
 
         return winningProposalId;
+    }
+
+    //[ONLYOWNER] Fonctions de resest/restart
+    function S5_ResetProposals() external onlyOwner {
+        for(uint i=0; i<proposalId; i++){
+            delete Proposals[i];    //mapping
+        }
+        proposalId = 0;
+    }
+    function S6_ResetVoters() external onlyOwner {
+        for(uint i=0; i<votersList.length; i++){
+            delete Voters[votersList[i]];    //mapping
+        }
+        delete votersList;                  //array
+    }
+    function S7_RestartVote() external onlyOwner {
+//    stepId = 0;
+        voterNbOk = 0;
+        countMax = 0;
+        winningProposalId = 9999;
+
     }
 
     //========================================================================
