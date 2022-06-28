@@ -244,7 +244,11 @@ contract Voting is Ownable {
         delete votersList;                  //array
     }
     function S7_RestartVote() external onlyOwner {
+<<<<<<< HEAD
 //    stepId = 0;
+=======
+        stepId = WorkflowStatus.RegisteringVoters;
+>>>>>>> e3df269b4ca5cafd3e2004341dd1124bcaf729e6
         voterNbOk = 0;
         countMax = 0;
         winningProposalId = 9999;
