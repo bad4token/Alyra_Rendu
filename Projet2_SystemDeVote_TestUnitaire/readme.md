@@ -187,6 +187,8 @@ module.exports = {
 };
 ```
 
+Nous utiliserons l'API de [Coinmarketcap](https://coinmarketcap.com/) pour le calcul des coûts en gas en Euro.
+
 <br/>
 
 ### 3.4. Initialisations et paramétrages de nodeJS
